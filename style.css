@@ -46,17 +46,50 @@ html {
 
 /* Home Section */
 #home {
-    height: 100vh;              /* full screen height */
-    display: flex;              /* enables centering */
-    justify-content: center;    /* horizontal center */
-    align-items: center;        /* vertical center */
-    background-color: #002b45;  /* dark blue background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    background-image: url("hhs-travel.jpg");
+    background-size: cover;
+    background-position: center;
 }
+
+/* Dark overlay */
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Keep title above overlay */
+.home-title {
+    position: relative;
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+}
+
 
 /* Title Styling */
 .home-title {
     color: white;
     font-size: 60px;
     font-weight: bold;
+    text-align: center;  
+}
+
+.home-subtitle {
+    position: relative;
+    color: white;
+    font-size: 20px;
+    margin-top: 10px;
     text-align: center;
 }
